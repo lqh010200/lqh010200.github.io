@@ -1,0 +1,420 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>客家·墩头蓝 — 传承六百年的蓝色记忆</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* History section */
+        .history-section {
+            background: linear-gradient(135deg, #f5f0eb, #ede6dc);
+            border-radius: var(--radius-lg);
+            padding: 3rem;
+            margin: 3rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .history-section::before {
+            content: "靛";
+            position: absolute;
+            right: -40px;
+            bottom: -40px;
+            font-size: 20rem;
+            font-family: var(--font-heading);
+            color: rgba(26,58,92,0.04);
+            font-weight: 700;
+        }
+        .history-section h2 {
+            font-family: var(--font-heading);
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 2px solid var(--accent);
+            position: relative;
+            z-index: 2;
+        }
+        .history-content {
+            position: relative;
+            z-index: 2;
+            columns: 2;
+            column-gap: 2.5rem;
+        }
+        .history-content p {
+            margin-bottom: 1rem;
+            text-align: justify;
+            font-size: 0.95rem;
+            line-height: 2;
+            break-inside: avoid;
+        }
+        .history-content .highlight {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        @media (max-width: 768px) {
+            .history-section { padding: 2rem 1.5rem; }
+            .history-content { columns: 1; }
+        }
+
+        /* Quote carousel */
+        .quote-section {
+            background: var(--primary);
+            border-radius: var(--radius-lg);
+            padding: 3rem;
+            margin: 3rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .quote-section::before {
+            content: """;
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            font-size: 10rem;
+            color: rgba(255,255,255,0.05);
+            font-family: serif;
+        }
+        .quote-text {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            color: var(--accent-light);
+            line-height: 2;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        .quote-author {
+            color: rgba(255,255,255,0.5);
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Friend links */
+        .links-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin: 1.5rem 0;
+        }
+        .links-grid a {
+            padding: 10px 24px;
+            background: var(--white);
+            border-radius: 50px;
+            box-shadow: var(--shadow);
+            color: var(--text-body);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all var(--transition);
+            border: 1px solid rgba(26,58,92,0.06);
+        }
+        .links-grid a:hover {
+            background: var(--primary);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Particles Background -->
+<div class="particles-bg" id="particles"></div>
+
+<!-- Header -->
+<header id="header">
+    <div class="header-inner">
+        <div class="logo">
+            <img src="images/LOGO.jpg" alt="墩头蓝">
+            <div class="logo-text">
+                客家·墩头蓝
+                <small>广东省省级非物质文化遗产</small>
+            </div>
+        </div>
+        <nav id="nav">
+            <a href="index.html" class="active">首页</a>
+            <a href="craft.html">制作工艺</a>
+            <a href="news.html">新闻动态</a>
+            <a href="about.html">关于我们</a>
+            <a href="study.html">研学活动</a>
+            <a href="contact.html">联系我们</a>
+        </nav>
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+    </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>客家·墩头蓝</h1>
+        <p class="subtitle">传承六百年的蓝色记忆</p>
+        <p class="desc">
+            广东省省级非物质文化遗产，起源于明代中期的客家织染技艺。<br>
+            以当地马蓝为染料，经"纺、耕、织、染、踹"五大环节、近三十道工序，<br>
+            织造出独具特色的纯蓝布料，承载着客家人六百年的智慧与审美。
+        </p>
+        <div class="hero-btns">
+            <a href="#intro" class="btn btn-primary">了解更多 ↓</a>
+            <a href="craft.html" class="btn btn-outline">探索工艺</a>
+        </div>
+    </div>
+    <div class="hero-scroll-indicator">
+        <div class="scroll-arrow"></div>
+        <span>向下滚动</span>
+    </div>
+</section>
+
+<div class="container" id="intro">
+
+    <!-- Intro Section -->
+    <h2 class="section-title fade-in">网站简介</h2>
+    <p class="section-subtitle fade-in">走近墩头蓝，守护客家文化根脉</p>
+
+    <div class="card fade-in" style="margin-bottom:3rem;">
+        <p style="font-size:1.05rem;line-height:2.2;">
+            <strong>客家·墩头蓝</strong> 是一项起源于明代中期、绵延至今六百余年的广东省省级非物质文化遗产。
+            它诞生于广东省河源市和平县彭寨镇墩头村，以当地种植的<strong>马蓝（板蓝）</strong>为染料，
+            经过"纺、耕、织、染、踹"五大核心环节、近三十道工序，织造出独具特色的蓝色布料。
+        </p>
+        <p style="font-size:1.05rem;line-height:2.2;margin-top:1rem;">
+            本网站由广州大学管理学院<strong>"今天你蓝了吗"</strong>团队制作，旨在让更多人了解墩头蓝、走近墩头蓝，
+            一起守护这份珍贵的客家文化遗产。网站融合了最新学术研究成果，为您呈现墩头蓝的完整面貌。
+        </p>
+    </div>
+
+    <!-- Stats Row -->
+    <div class="stats-row fade-in">
+        <div class="stat-item">
+            <div class="stat-number"><span class="counter" data-target="600">0</span><span class="suffix">+</span></div>
+            <div class="stat-label">年传承历史</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number"><span class="counter" data-target="30">0</span><span class="suffix">+</span></div>
+            <div class="stat-label">道制作工序</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number"><span class="counter" data-target="72">0</span><span class="suffix">+</span></div>
+            <div class="stat-label">道完整工艺</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number"><span class="counter" data-target="3">0</span><span class="suffix">级</span></div>
+            <div class="stat-label">研学体系</div>
+        </div>
+    </div>
+
+    <!-- Feature Cards -->
+    <h2 class="section-title fade-in">墩头蓝·三大特色</h2>
+    <p class="section-subtitle fade-in">天然·匠心·创新</p>
+
+    <div class="feature-grid fade-in">
+        <div class="feature-card">
+            <span class="feature-icon">🌿</span>
+            <h3>天然植物染</h3>
+            <p>以本地种植的<strong>马蓝（板蓝根）</strong>为原料，经采蓝、沤蓝、打靛、养靛等工序制成天然靛蓝染料。环保健康，色泽沉静典雅，还具有清热解毒的药用功效。</p>
+        </div>
+        <div class="feature-card">
+            <span class="feature-icon">🧵</span>
+            <h3>七十二道工序</h3>
+            <p>从种植棉花、纺纱到织布、染色、踹布，全过程有近三十道工序，每一道都凝聚着客家先民的智慧和匠心。墩头村传承人曾春雷老师是掌握完整工序的唯一传人。</p>
+        </div>
+        <div class="feature-card">
+            <span class="feature-icon">🏠</span>
+            <h3>非遗活化创新</h3>
+            <p>广州大学团队携手传承人曾春雷老师，将传统蓝染从布料服饰转向现代家居赛道，打造"产品创新+三层级研学+全链路数字化"三位一体的非遗活化方案。</p>
+        </div>
+    </div>
+
+    <!-- History Section from PDF -->
+    <div class="history-section fade-in">
+        <h2>📜 历史渊源：墩头蓝的蓝靛制作与蓝染工艺考辩</h2>
+        <div class="history-content">
+            <p><span class="highlight">蓝草之源：</span>据《天工开物》记载，"凡蓝五种，皆可为淀"，墩头村选用的是最适合当地环境的<strong>马蓝</strong>（又称板蓝、大蓝）。马蓝喜山坡溪边阴湿处，单株可高达1米以上，叶片可达10~25厘米，提取的靛蓝成分比其它蓝草多数倍，一年可收割两次。</p>
+            <p><span class="highlight">制靛古法：</span>《齐民要术》记载了北魏时期已熟练的制蓝靛工艺："七月中作坑……刈蓝倒竖于坑中，下水，以木石镇压令没。"墩头村至今保留着完整的传统制靛流程：浸泡大蓝（气温高时一宿，低时两宿）→ 去渣取汁 → 加石灰水搅拌 → 静置氧化 → 沉淀去水 → 过滤得蓝靛泥。浸泡时间、气温、石灰比例都影响最终品质，需长期摸索总结。</p>
+            <p><span class="highlight">起缸秘诀：</span>"墩头蓝"染水的发酵极为讲究，秘诀在于每天的"<strong>晨灰</strong>"和"<strong>晚酒</strong>"。"晨灰"即清晨向染缸加入少量草木灰水以唤醒染水活性；"晚酒"即太阳落山后加入少量米酒促进微生物发酵还原。这种人工发酵还原染色工艺是古代匠人智慧的结晶。</p>
+            <p><span class="highlight">纯蓝之因：</span>墩头蓝以纯蓝素染为主，这与三大因素息息相关：其一，马蓝的经济性和高产决定了其广泛种植；其二，纯蓝染色牢固度高、耐光性好，具有实用功能；其三，客家人崇尚节俭、低调、实用的文化传统，使纯蓝成为最受欢迎的服饰颜色。</p>
+            <p><span class="highlight">学术考证：</span>据李银广、陈建宏等学者的研究（2022），"墩头蓝"的蓝靛制作选用最具实用性和经济性的马蓝，从传统染织中传承并改良了制蓝靛、纺织和蓝染等工艺。明代至民国时期，广东地区大面积种植蓝草，蓝靛税成为政府的主要税源之一。</p>
+        </div>
+    </div>
+
+    <!-- Quote Section -->
+    <div class="quote-section fade-in">
+        <p class="quote-text">"一天蓝三天乌"<br>浸染时间越长，颜色越深沉——这是墩头蓝世代相传的染色秘诀。</p>
+        <p class="quote-author">—— 墩头村非遗传承人 · 曾春雷</p>
+    </div>
+
+    <!-- Image Gallery -->
+    <h2 class="section-title fade-in">工艺掠影</h2>
+    <p class="section-subtitle fade-in">墩头蓝的制作之美</p>
+
+    <div class="gallery-grid fade-in">
+        <div class="gallery-item" onclick="openLightbox('images/原料取叶.jpg')">
+            <img src="images/原料取叶.jpg" alt="原料取叶">
+            <div class="overlay">原料取叶</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/制作染料.jpg')">
+            <img src="images/制作染料.jpg" alt="制作染料">
+            <div class="overlay">制作染料</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/染.jpg')">
+            <img src="images/染.jpg" alt="染色工艺">
+            <div class="overlay">染色工艺</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/晒布区.jpg')">
+            <img src="images/晒布区.jpg" alt="晒布区">
+            <div class="overlay">晒布区</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/蓝染料.jpg')">
+            <img src="images/蓝染料.jpg" alt="蓝染料">
+            <div class="overlay">蓝染料</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('images/布料与植被.jpg')">
+            <img src="images/布料与植被.jpg" alt="布料与植被">
+            <div class="overlay">布料与植被</div>
+        </div>
+    </div>
+
+    <!-- Latest News -->
+    <h2 class="section-title fade-in">最新动态</h2>
+    <p class="section-subtitle fade-in">墩头蓝的最新消息</p>
+
+    <div class="news-list fade-in">
+        <div class="news-card">
+            <span class="news-date">2026年3月</span>
+            <h3>团队深入墩头村开展实地调研</h3>
+            <p>广州大学"今天你蓝了吗"团队前往河源市和平县彭寨镇墩头村开展实地调研，历时近100天，走访10余个村落，与非遗传承人曾春雷老师深入交流。</p>
+        </div>
+        <div class="news-card">
+            <span class="news-date">2026年2月</span>
+            <h3>墩头蓝亮相广州非遗年味活动</h3>
+            <p>墩头蓝作为广州非遗年味的"C位"亮相，通过展示传统布料、现代文创产品以及现场扎染体验，吸引众多市民和游客关注。</p>
+        </div>
+        <div class="news-card">
+            <span class="news-date">2026年1月</span>
+            <h3>"今天你蓝了吗"团队完成首轮产品打样</h3>
+            <p>团队完成了首轮"蓝蕴四时"系列产品打样，包括蚕丝被及配套家居产品，材料包产品已进入试销阶段。</p>
+        </div>
+    </div>
+
+    <!-- Friend Links -->
+    <h2 class="section-title fade-in">友情链接</h2>
+    <div class="links-grid fade-in">
+        <a href="https://www.gzhu.edu.cn/" target="_blank">广州大学</a>
+        <a href="https://www.heyuan.gov.cn/" target="_blank">河源市人民政府</a>
+        <a href="https://www.mct.gov.cn/" target="_blank">文化和旅游部</a>
+        <a href="https://www.gd.gov.cn/" target="_blank">广东省人民政府</a>
+    </div>
+
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-logo">客家·墩头蓝</div>
+        <div class="footer-divider"></div>
+        <p>© 2026 广州大学 "今天你蓝了吗" 团队 | 版权所有</p>
+        <p>指导老师：黄丽娟教授 | 非遗传承人：曾春雷老师</p>
+        <p>联系方式：278523411@qq.com | 地址：广东省河源市和平县彭寨镇墩头村</p>
+    </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+    <img id="lightbox-img" src="" alt="">
+</div>
+
+<!-- Back to Top -->
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+// Mobile menu
+function toggleMobileMenu() {
+    document.getElementById('nav').classList.toggle('open');
+}
+
+// Particles
+(function() {
+    const container = document.getElementById('particles');
+    for (let i = 0; i < 20; i++) {
+        const p = document.createElement('div');
+        p.className = 'particle';
+        p.style.left = Math.random() * 100 + '%';
+        p.style.animationDuration = (15 + Math.random() * 25) + 's';
+        p.style.animationDelay = (Math.random() * 20) + 's';
+        p.style.width = p.style.height = (3 + Math.random() * 5) + 'px';
+        container.appendChild(p);
+    }
+})();
+
+// Header scroll
+window.addEventListener('scroll', function() {
+    const header = document.getElementById('header');
+    const backTop = document.getElementById('backTop');
+    if (window.scrollY > 100) {
+        header.classList.add('scrolled');
+        backTop.classList.add('visible');
+    } else {
+        header.classList.remove('scrolled');
+        backTop.classList.remove('visible');
+    }
+});
+
+// Scroll reveal (Intersection Observer)
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right, .fade-in-scale').forEach(el => {
+    observer.observe(el);
+});
+
+// Counter animation
+const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const el = entry.target;
+            const target = parseInt(el.dataset.target);
+            animateCounter(el, target);
+            counterObserver.unobserve(el);
+        }
+    });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
+
+function animateCounter(el, target) {
+    let current = 0;
+    const step = Math.max(1, Math.floor(target / 60));
+    const interval = setInterval(() => {
+        current += step;
+        if (current >= target) {
+            current = target;
+            clearInterval(interval);
+        }
+        el.textContent = current;
+    }, 20);
+}
+
+// Lightbox
+function openLightbox(src) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox').classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = '';
+}
+</script>
+
+</body>
+</html>
