@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>客家·墩头蓝 — 关于我们</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .team-card {
+            display: flex;
+            gap: 24px;
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 1.5rem;
+            transition: all var(--transition);
+            border: 1px solid rgba(26,58,92,0.06);
+        }
+        .team-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+        .team-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0;
+            box-shadow: var(--shadow);
+            border: 3px solid var(--warm-bg2);
+        }
+        .team-card .info { flex: 1; }
+        .team-card h3 {
+            font-family: var(--font-heading);
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+            border: none;
+            padding: 0;
+        }
+        .team-card .role {
+            color: var(--accent);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.6rem;
+        }
+        .team-card p {
+            font-size: 0.95rem;
+            line-height: 1.9;
+        }
+        @media (max-width: 600px) {
+            .team-card { flex-direction: column; align-items: center; text-align: center; }
+        }
+        .honor-list {
+            list-style: none;
+            padding: 0;
+        }
+        .honor-list li {
+            padding: 0.8rem 1rem;
+            background: var(--white);
+            margin-bottom: 10px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all var(--transition);
+            font-size: 0.95rem;
+        }
+        .honor-list li:hover {
+            transform: translateX(6px);
+            box-shadow: var(--shadow-lg);
+        }
+        .honor-list li::before {
+            content: "🏆";
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="particles-bg" id="particles"></div>
+
+<header id="header">
+    <div class="header-inner">
+        <div class="logo">
+            <img src="images/LOGO.jpg" alt="墩头蓝">
+            <div class="logo-text">
+                客家·墩头蓝
+                <small>广东省省级非物质文化遗产</small>
+            </div>
+        </div>
+        <nav id="nav">
+            <a href="index.html">首页</a>
+            <a href="craft.html">制作工艺</a>
+            <a href="news.html">新闻动态</a>
+            <a href="about.html" class="active">关于我们</a>
+            <a href="study.html">研学活动</a>
+            <a href="contact.html">联系我们</a>
+        </nav>
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+    </div>
+</header>
+
+<div class="page-banner">
+    <h2>关于我们</h2>
+    <p>广州大学"今天你蓝了吗"创业团队</p>
+</div>
+
+<div class="container">
+
+    <div class="card fade-in">
+        <h3>🎯 项目简介</h3>
+        <p style="line-height:2.2;font-size:1rem;">
+            <strong>客家·墩头蓝非遗活化项目</strong> 由广州大学管理学院发起，团队名为<strong>"今天你蓝了吗"</strong>。
+            项目以<strong>"非遗活化+乡村振兴"</strong>为核心使命，携手墩头蓝唯一非遗传承人 <strong>曾春雷老师</strong>，
+            提出<strong>"产品创新+三层级研学+全链路数字化"</strong>三位一体的非遗活化方案。
+        </p>
+        <p style="line-height:2.2;font-size:1rem;margin-top:0.8rem;">
+            项目聚焦墩头蓝织染技艺的创造性转化与创新性发展，将传统蓝染从布料和服饰领域转向现代家居赛道，
+            打造从高端蚕丝被到亲民配套家居的产品体系；同时开发三层级研学体系和全链路数字化运营平台。
+        </p>
+    </div>
+
+    <h2 class="section-title fade-in">团队介绍</h2>
+    <p class="section-subtitle fade-in">学术指导 · 传承人 · 创业团队</p>
+
+    <div class="team-card fade-in">
+        <img src="images/黄丽娟.jpg" alt="黄丽娟">
+        <div class="info">
+            <h3>指导老师：黄丽娟 教授</h3>
+            <div class="role">广州大学管理学院 · 教授/博士/博导</div>
+            <p>电子商务领域权威专家，主持30余项省部级以上课题，发表90余篇核心论文，在农村电商与数智电商领域拥有丰富的理论和实操经验，为项目提供全程学术指导。</p>
+        </div>
+    </div>
+
+    <div class="team-card fade-in">
+        <img src="images/曾春雷.jpg" alt="曾春雷">
+        <div class="info">
+            <h3>非遗传承人：曾春雷 老师</h3>
+            <div class="role">墩头蓝织染技艺 · 省级非遗代表性传承人</div>
+            <p>目前墩头村掌握完整七十二道工序的唯一传承人，一人身兼生产、销售、接待、教学等多重角色，守护着这门六百年的手艺。他不仅是技艺的守护者，更是墩头蓝活态传承的核心力量。</p>
+        </div>
+    </div>
+
+    <div class="team-card fade-in">
+        <img src="images/LOGO.jpg" alt="团队">
+        <div class="info">
+            <h3>团队成员</h3>
+            <div class="role">广州大学管理学院 · 多学科交叉团队</div>
+            <p>团队成员由多名本科生组成，涵盖电子商务、设计学、数字媒体技术等多学科背景。团队历时近100天深入墩头村开展田野调研，走访10余个村落，查阅近千份文献资料，为项目的学术深度和实业落地打下了坚实基础。</p>
+        </div>
+    </div>
+
+    <!-- Honors -->
+    <h2 class="section-title fade-in">项目荣誉</h2>
+    <ul class="honor-list fade-in">
+        <li>参加第十六届三创赛荣获广州大学校级第五名，成功进入省赛</li>
+        <li>参加中国国际大学生创新大赛"青年红色筑梦之旅"赛道</li>
+        <li>获得广东省、河源市、和平县各级政府部门积极扶持</li>
+        <li>与南方乡投电商平台、墩头蓝纺织有限公司达成合作意向</li>
+        <li>获黄丽娟教授电子商务与供应链管理领域专业指导</li>
+    </ul>
+
+    <div class="img-center fade-in">
+        <img src="images/广州大学湖.jpeg" alt="广州大学" style="max-width:80%;border-radius:var(--radius);box-shadow:var(--shadow);">
+    </div>
+
+</div>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-logo">客家·墩头蓝</div>
+        <div class="footer-divider"></div>
+        <p>© 2026 广州大学 "今天你蓝了吗" 团队 | 版权所有</p>
+        <p>指导老师：黄丽娟教授 | 非遗传承人：曾春雷老师</p>
+        <p>联系方式：278523411@qq.com | 地址：广东省河源市和平县彭寨镇墩头村</p>
+    </div>
+</footer>
+
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+function toggleMobileMenu() { document.getElementById('nav').classList.toggle('open'); }
+const container = document.getElementById('particles');
+for (let i = 0; i < 15; i++) {
+    const p = document.createElement('div'); p.className = 'particle';
+    p.style.left = Math.random() * 100 + '%';
+    p.style.animationDuration = (15 + Math.random() * 25) + 's';
+    p.style.animationDelay = (Math.random() * 20) + 's';
+    p.style.width = p.style.height = (3 + Math.random() * 5) + 'px';
+    container.appendChild(p);
+}
+window.addEventListener('scroll', function() {
+    const h = document.getElementById('header');
+    const bt = document.getElementById('backTop');
+    if (window.scrollY > 100) { h.classList.add('scrolled'); bt.classList.add('visible'); }
+    else { h.classList.remove('scrolled'); bt.classList.remove('visible'); }
+});
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
