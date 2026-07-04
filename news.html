@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>客家·墩头蓝 — 新闻动态</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .news-timeline {
+            position: relative;
+        }
+        .news-timeline::before {
+            content: "";
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--primary-light), var(--accent));
+            border-radius: 2px;
+        }
+        .news-tl-item {
+            position: relative;
+            padding: 0 0 2rem 60px;
+        }
+        .news-tl-item::before {
+            content: "";
+            position: absolute;
+            left: 14px;
+            top: 8px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 4px solid var(--warm-bg);
+            box-shadow: var(--shadow);
+        }
+        .news-tl-item:last-child { padding-bottom: 0; }
+        .buy-btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 12px 32px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-mid));
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition);
+            box-shadow: 0 4px 15px rgba(26,58,92,0.3);
+            letter-spacing: 1px;
+        }
+        .buy-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(26,58,92,0.4);
+            background: linear-gradient(135deg, var(--primary-mid), var(--primary-light));
+            color: white;
+        }
+        .buy-btn .icon { margin-right: 6px; }
+        .wechat-tip {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-top: 0.6rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            justify-content: center;
+        }
+        .wechat-tip .badge {
+            display: inline-block;
+            padding: 2px 10px;
+            background: #07c160;
+            color: white;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+<div class="particles-bg" id="particles"></div>
+
+<header id="header">
+    <div class="header-inner">
+        <div class="logo">
+            <img src="images/LOGO.jpg" alt="墩头蓝">
+            <div class="logo-text">
+                客家·墩头蓝
+                <small>广东省省级非物质文化遗产</small>
+            </div>
+        </div>
+        <nav id="nav">
+            <a href="index.html">首页</a>
+            <a href="craft.html">制作工艺</a>
+            <a href="news.html" class="active">新闻动态</a>
+            <a href="about.html">关于我们</a>
+            <a href="study.html">研学活动</a>
+            <a href="contact.html">联系我们</a>
+        </nav>
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+    </div>
+</header>
+
+<div class="page-banner">
+    <h2>新闻动态</h2>
+    <p>墩头蓝最新消息与团队动态</p>
+</div>
+
+<div class="container">
+    <div class="news-timeline fade-in">
+        <div class="news-tl-item">
+            <div class="news-card" style="margin-bottom:0;">
+                <span class="news-date">2026年3月15日</span>
+                <h3>团队深入墩头村开展实地调研</h3>
+                <p>广州大学"今天你蓝了吗"团队前往河源市和平县彭寨镇墩头村开展实地调研。团队走访了墩头村多个自然村，与非遗传承人曾春雷老师深入交流，详细了解墩头蓝的制作工艺与传承现状。此次调研历时近100天，走访10余个村落，为项目的后续发展打下了坚实的基础。</p>
+            </div>
+        </div>
+
+        <div class="news-tl-item">
+            <div class="news-card" style="margin-bottom:0;">
+                <span class="news-date">2026年2月</span>
+                <h3>墩头蓝亮相广州非遗年味活动</h3>
+                <p>墩头蓝作为广州非遗年味的"C位"亮相，吸引了众多市民和游客的关注。通过展示墩头蓝传统布料、现代文创产品以及现场扎染体验，让更多人了解和喜爱这项传统技艺。"非遗+年味"的组合，让传统文化以更亲切的方式走进大众生活。</p>
+            </div>
+        </div>
+
+        <div class="news-tl-item">
+            <div class="news-card" style="margin-bottom:0;">
+                <span class="news-date">2026年1月</span>
+                <h3>"今天你蓝了吗"团队完成首轮产品打样</h3>
+                <p>团队完成了首轮"蓝蕴四时"系列产品打样，包括蚕丝被及配套家居产品。产品将传统蓝染与现代家居设计相结合，让非遗走进现代生活。材料包产品也已进入试销阶段，获得了首批用户的好评反馈。</p>
+            </div>
+        </div>
+
+        <div class="news-tl-item">
+            <div class="news-card" style="margin-bottom:0;">
+                <span class="news-date">2025年12月</span>
+                <h3>墩头蓝研学课程方案设计完成</h3>
+                <p>三层级研学体系课程方案设计完成：69元线上材料包、88元半日体验游、95元全日闯关研学游。从线上到线下，满足不同人群的体验需求。研学课程融合了墩头蓝的历史文化讲解和亲手扎染实践体验。</p>
+            </div>
+        </div>
+
+        <div class="news-tl-item">
+            <div class="news-card" style="margin-bottom:0;">
+                <span class="news-date">2025年11月</span>
+                <h3>广东省非遗保护调研组考察墩头蓝</h3>
+                <p>广东省文化和旅游厅非遗保护调研组赴河源市和平县考察墩头蓝织染技艺保护传承情况，对墩头蓝的保护和活化利用工作给予肯定。这标志着墩头蓝的非遗保护工作得到了省级层面的重视和支持。</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 公众号关注按钮 -->
+    <div class="card fade-in" style="text-align:center;margin:2rem 0;padding:2rem;">
+        <h3>📢 关注我们</h3>
+        <p style="margin:1rem 0;">扫码关注墩头蓝官方微信公众号，获取最新活动资讯与非遗动态</p>
+        <button class="buy-btn" onclick="openWeChatOA()">
+            <span class="icon">📱</span> 关注公众号
+        </button>
+        <div class="wechat-tip"><span class="badge">微信</span> 在微信内点击直接跳转关注</div>
+    </div>
+
+</div>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-logo">客家·墩头蓝</div>
+        <div class="footer-divider"></div>
+        <p>© 2026 广州大学 "今天你蓝了吗" 团队 | 版权所有</p>
+        <p>指导老师：黄丽娟教授 | 非遗传承人：曾春雷老师</p>
+        <p>联系方式：278523411@qq.com | 地址：广东省河源市和平县彭寨镇墩头村</p>
+    </div>
+</footer>
+
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+function toggleMobileMenu() { document.getElementById('nav').classList.toggle('open'); }
+const container = document.getElementById('particles');
+for (let i = 0; i < 15; i++) {
+    const p = document.createElement('div'); p.className = 'particle';
+    p.style.left = Math.random() * 100 + '%';
+    p.style.animationDuration = (15 + Math.random() * 25) + 's';
+    p.style.animationDelay = (Math.random() * 20) + 's';
+    p.style.width = p.style.height = (3 + Math.random() * 5) + 'px';
+    container.appendChild(p);
+}
+window.addEventListener('scroll', function() {
+    const h = document.getElementById('header');
+    const bt = document.getElementById('backTop');
+    if (window.scrollY > 100) { h.classList.add('scrolled'); bt.classList.add('visible'); }
+    else { h.classList.remove('scrolled'); bt.classList.remove('visible'); }
+});
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// 公众号跳转函数 - 点击打开墩头蓝官方公众号主页关注
+function openWeChatOA() {
+    window.location.href = 'https://mp.weixin.qq.com/s/rjVnapawDrcZ5QS_5QZFxw';
+}
+</script>
+</body>
+</html>
