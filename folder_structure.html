@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>客家·墩头蓝 — 文件夹分类图</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="particles-bg" id="particles"></div>
+
+<header id="header">
+    <div class="header-inner">
+        <div class="logo">
+            <img src="images/LOGO.jpg" alt="墩头蓝">
+            <div class="logo-text">
+                客家·墩头蓝
+                <small>广东省省级非物质文化遗产</small>
+            </div>
+        </div>
+        <nav id="nav">
+            <a href="index.html">首页</a>
+            <a href="craft.html">制作工艺</a>
+            <a href="news.html">新闻动态</a>
+            <a href="about.html">关于我们</a>
+            <a href="study.html">研学活动</a>
+            <a href="contact.html">联系我们</a>
+        </nav>
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+    </div>
+</header>
+
+<div class="page-banner">
+    <h2>文件夹分类图</h2>
+    <p>网站文件组织结构一览</p>
+</div>
+
+<div class="container">
+    <h2 class="section-title fade-in">网站文件夹结构</h2>
+    <p class="section-subtitle fade-in">以下是本网站所有文件的组织结构</p>
+
+    <pre class="fade-in" style="font-family:'Consolas','Courier New',monospace;">
+HTML作业/
+│
+├── index.html              首页
+├── craft.html              制作工艺页面
+├── news.html               新闻动态页面
+├── about.html              关于我们页面
+├── study.html              研学活动页面
+├── contact.html            联系我们页面
+├── style.css               样式表文件
+├── site_structure.html     网站文件结构图
+├── folder_structure.html   本文件：文件夹分类图
+│
+├── images/                 图片文件夹
+│   ├── LOGO.jpg
+│   ├── 广州大学背景图.jpeg
+│   ├── 广州大学湖.jpeg
+│   ├── 布料与植被.jpg
+│   ├── 晒布区.jpg
+│   ├── 曾春雷.jpg
+│   ├── 黄丽娟.jpg
+│   ├── 染.jpg
+│   ├── 蓝染料.jpg
+│   ├── 制作染料.jpg
+│   ├── 板蓝.jpg
+│   ├── 原料取叶.jpg
+│   ├── 采板蓝.jpg
+│   ├── 染料.jpg
+│   ├── 服装.jpg
+│   ├── 耳环1.jpg
+│   ├── 耳环2.jpg
+│   ├── 装饰.png
+│   └── 背景1.png
+│
+└── 内容/                   素材文件夹（不参与网站运行）
+    ├── 图片/
+    ├── 公众号/
+    └── ...（作业素材）
+    </pre>
+
+    <h2 class="section-title fade-in">分类说明</h2>
+    <div class="table-wrap fade-in">
+        <table>
+            <tr><th>分类</th><th>文件夹/文件</th><th>说明</th></tr>
+            <tr><td>网页文件</td><td>*.html</td><td>网站的各个页面，包含首页、工艺、新闻、关于、研学、联系</td></tr>
+            <tr><td>样式文件</td><td>style.css</td><td>控制网页外观，含动画效果与响应式设计</td></tr>
+            <tr><td>图片资源</td><td>images/</td><td>存放所有图片素材，共19个文件</td></tr>
+            <tr><td>素材资料</td><td>内容/</td><td>作业素材原始文件</td></tr>
+        </table>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-logo">客家·墩头蓝</div>
+        <div class="footer-divider"></div>
+        <p>© 2026 广州大学 "今天你蓝了吗" 团队 | 文件夹分类图</p>
+    </div>
+</footer>
+
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+function toggleMobileMenu() { document.getElementById('nav').classList.toggle('open'); }
+const container = document.getElementById('particles');
+for (let i = 0; i < 12; i++) {
+    const p = document.createElement('div'); p.className = 'particle';
+    p.style.left = Math.random() * 100 + '%';
+    p.style.animationDuration = (15 + Math.random() * 25) + 's';
+    p.style.animationDelay = (Math.random() * 20) + 's';
+    container.appendChild(p);
+}
+window.addEventListener('scroll', function() {
+    const h = document.getElementById('header');
+    const bt = document.getElementById('backTop');
+    if (window.scrollY > 100) { h.classList.add('scrolled'); bt.classList.add('visible'); }
+    else { h.classList.remove('scrolled'); bt.classList.remove('visible'); }
+});
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
