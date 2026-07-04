@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>客家·墩头蓝 — 网站文件结构图</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .sitemap {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            margin: 2rem 0;
+        }
+        .sitemap .center-node {
+            text-align: center;
+            padding: 1rem;
+            background: var(--primary);
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+        .sitemap .page-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        .sitemap .page-node {
+            padding: 12px 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: all var(--transition);
+            min-width: 120px;
+            flex: 1;
+        }
+        .sitemap .page-node:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+        }
+        .sitemap .page-node.main { background: var(--primary-mid); color: white; }
+        .sitemap .page-node.sub { background: rgba(44,95,138,0.1); color: var(--primary); }
+        .sitemap .page-node.resource { background: var(--warm-bg2); color: var(--text-body); }
+        .sitemap .page-node strong { display: block; font-size: 0.9rem; }
+        .sitemap .page-node small { font-size: 0.75rem; opacity: 0.8; display: block; margin-top: 2px; }
+        .sitemap .connector {
+            text-align: center;
+            color: var(--text-light);
+            font-size: 0.8rem;
+            margin: 0.3rem 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="particles-bg" id="particles"></div>
+
+<header id="header">
+    <div class="header-inner">
+        <div class="logo">
+            <img src="images/LOGO.jpg" alt="墩头蓝">
+            <div class="logo-text">
+                客家·墩头蓝
+                <small>广东省省级非物质文化遗产</small>
+            </div>
+        </div>
+        <nav id="nav">
+            <a href="index.html">首页</a>
+            <a href="craft.html">制作工艺</a>
+            <a href="news.html">新闻动态</a>
+            <a href="about.html">关于我们</a>
+            <a href="study.html">研学活动</a>
+            <a href="contact.html">联系我们</a>
+        </nav>
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+    </div>
+</header>
+
+<div class="page-banner">
+    <h2>网站文件结构图</h2>
+    <p>清晰了解网站的整体架构</p>
+</div>
+
+<div class="container">
+    <h2 class="section-title fade-in">网站页面关系</h2>
+    <p class="section-subtitle fade-in">本网站共6个主要页面 + 辅助资源文件</p>
+
+    <div class="sitemap fade-in">
+        <div class="center-node">🎨 style.css（样式表 — 控制所有页面风格）</div>
+
+        <div class="connector">↓ 导航栏链接所有页面</div>
+
+        <div class="page-row">
+            <div class="page-node main"><strong>index.html</strong><small>首页</small></div>
+        </div>
+
+        <div class="connector">↓ 子页面</div>
+
+        <div class="page-row">
+            <div class="page-node sub"><strong>craft.html</strong><small>制作工艺</small></div>
+            <div class="page-node sub"><strong>news.html</strong><small>新闻动态</small></div>
+            <div class="page-node sub"><strong>about.html</strong><small>关于我们</small></div>
+            <div class="page-node sub"><strong>study.html</strong><small>研学活动</small></div>
+            <div class="page-node sub"><strong>contact.html</strong><small>联系我们</small></div>
+        </div>
+
+        <div class="connector">辅助资源</div>
+
+        <div class="page-row">
+            <div class="page-node resource"><strong>images/</strong><small>图片文件夹</small></div>
+            <div class="page-node resource"><strong>folder_structure.html</strong><small>文件夹分类图</small></div>
+            <div class="page-node resource"><strong>site_structure.html</strong><small>网站文件结构图</small></div>
+        </div>
+    </div>
+
+    <h2 class="section-title fade-in">页面功能一览</h2>
+    <div class="table-wrap fade-in">
+        <table>
+            <tr><th>文件</th><th>功能</th><th>主要内容</th></tr>
+            <tr><td>index.html</td><td>网站首页</td><td>墩头蓝简介、历史渊源（含PDF学术内容）、三大特色、工艺掠影、最新动态、友情链接</td></tr>
+            <tr><td>craft.html</td><td>制作工艺</td><td>纺耕织染踹五大工序详细介绍，含制靛古法、起缸秘诀等PDF学术考证</td></tr>
+            <tr><td>news.html</td><td>新闻动态</td><td>团队新闻与墩头蓝动态时间线</td></tr>
+            <tr><td>about.html</td><td>关于我们</td><td>团队、指导老师、传承人介绍、项目荣誉</td></tr>
+            <tr><td>study.html</td><td>研学活动</td><td>三层级研学体系介绍、课程特色</td></tr>
+            <tr><td>contact.html</td><td>联系我们</td><td>联系方式、留言表单、社交关注</td></tr>
+            <tr><td>style.css</td><td>样式表</td><td>深蓝主题 · 动画效果 · 响应式设计 · 交互组件</td></tr>
+            <tr><td>images/</td><td>图片资源</td><td>网站使用的所有图片素材</td></tr>
+        </table>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-logo">客家·墩头蓝</div>
+        <div class="footer-divider"></div>
+        <p>© 2026 广州大学 "今天你蓝了吗" 团队 | 网站文件结构图</p>
+    </div>
+</footer>
+
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+function toggleMobileMenu() { document.getElementById('nav').classList.toggle('open'); }
+const container = document.getElementById('particles');
+for (let i = 0; i < 12; i++) {
+    const p = document.createElement('div'); p.className = 'particle';
+    p.style.left = Math.random() * 100 + '%';
+    p.style.animationDuration = (15 + Math.random() * 25) + 's';
+    p.style.animationDelay = (Math.random() * 20) + 's';
+    container.appendChild(p);
+}
+window.addEventListener('scroll', function() {
+    const h = document.getElementById('header');
+    const bt = document.getElementById('backTop');
+    if (window.scrollY > 100) { h.classList.add('scrolled'); bt.classList.add('visible'); }
+    else { h.classList.remove('scrolled'); bt.classList.remove('visible'); }
+});
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
