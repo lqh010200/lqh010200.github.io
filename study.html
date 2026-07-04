@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>客家·墩头蓝 — 研学活动</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .study-level {
+            position: relative;
+            padding: 2rem;
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 1.5rem;
+            transition: all var(--transition);
+            border-top: 4px solid var(--primary-light);
+            overflow: hidden;
+        }
+        .study-level:nth-child(2) { border-top-color: var(--accent); }
+        .study-level:nth-child(3) { border-top-color: #3d7a5a; }
+        .study-level:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+        .study-level .level-badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 6px 18px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            border-radius: 0 var(--radius) 0 12px;
+        }
+        .study-level:nth-child(1) .level-badge { background: rgba(44,95,138,0.1); color: var(--primary); }
+        .study-level:nth-child(2) .level-badge { background: rgba(201,149,60,0.1); color: var(--accent); }
+        .study-level:nth-child(3) .level-badge { background: rgba(61,122,90,0.1); color: #3d7a5a; }
+        .study-level h3 {
+            font-family: var(--font-heading);
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin-bottom: 0.8rem;
+            border: none;
+            padding: 0;
+            padding-right: 80px;
+        }
+        .study-level .price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 0.8rem;
+        }
+        .study-level ul {
+            padding-left: 1.2rem;
+            line-height: 2.2;
+        }
+        .study-level ul li { font-size: 0.95rem; }
+        .buy-btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 12px 32px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-mid));
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition);
+            box-shadow: 0 4px 15px rgba(26,58,92,0.3);
+            letter-spacing: 1px;
+        }
+        .buy-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(26,58,92,0.4);
+            background: linear-gradient(135deg, var(--primary-mid), var(--primary-light));
+            color: white;
+        }
+        .buy-btn .icon { margin-right: 6px; }
+        .wechat-tip {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-top: 0.6rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            justify-content: center;
+        }
+        .wechat-tip .badge {
+            display: inline-block;
+            padding: 2px 10px;
+            background: #07c160;
+            color: white;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+        .study-level .btn-wrap {
+            text-align: center;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="particles-bg" id="particles"></div>
+
+<header id="header">
+    <div class="header-inner">
+        <div class="logo">
+            <img src="images/LOGO.jpg" alt="墩头蓝">
+            <div class="logo-text">
+                客家·墩头蓝
+                <small>广东省省级非物质文化遗产</small>
+            </div>
+        </div>
+        <nav id="nav">
+            <a href="index.html">首页</a>
+            <a href="craft.html">制作工艺</a>
+            <a href="news.html">新闻动态</a>
+            <a href="about.html">关于我们</a>
+            <a href="study.html" class="active">研学活动</a>
+            <a href="contact.html">联系我们</a>
+        </nav>
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+    </div>
+</header>
+
+<div class="page-banner">
+    <h2>研学活动</h2>
+    <p>三层级研学体系 · 亲手体验非遗蓝染</p>
+</div>
+
+<div class="container">
+
+    <p class="fade-in" style="font-size:1.05rem;line-height:2.2;margin-bottom:2rem;">
+        为了让更多人亲身感受墩头蓝的魅力，我们设计了 <strong>三层级研学体系</strong>，
+        从线上到线下，从体验到深入，满足不同人群的需求。无论你是初学者还是文化深度爱好者，
+        都能在这里找到适合自己的体验方式。
+    </p>
+
+    <div class="study-level fade-in">
+        <span class="level-badge">入门级</span>
+        <h3>第一层：线上材料包</h3>
+        <div class="price">¥69</div>
+        <p><strong>适合人群：</strong> 对蓝染感兴趣、想在家尝试的初学者</p>
+        <p><strong>内容：</strong> 包含蓝染材料包（染料、布料、工具）和在线视频教程，在家就能完成自己的第一件蓝染作品。</p>
+        <p><strong>时长：</strong> 约1-2小时</p>
+        <p><strong>收获：</strong> 了解墩头蓝文化，亲手完成一件扎染作品，建立品牌认知。</p>
+        <div class="btn-wrap">
+            <button class="buy-btn" onclick="openMiniProgram()">
+                <span class="icon">🛒</span> 立即报名购买
+            </button>
+            <div class="wechat-tip"><span class="badge">微信</span> 在微信内点击直接跳转小程序购买</div>
+        </div>
+    </div>
+
+    <div class="study-level fade-in">
+        <span class="level-badge">体验级</span>
+        <h3>第二层：半日体验游</h3>
+        <div class="price">¥88</div>
+        <p><strong>适合人群：</strong> 想亲身到墩头村体验的亲子家庭、学生群体</p>
+        <p><strong>内容：</strong> 在墩头村实地参观古村风貌、了解墩头蓝历史，在工坊亲手体验蓝染制作。</p>
+        <p><strong>时长：</strong> 约半日（3-4小时）</p>
+        <p><strong>收获：</strong> 加深对墩头蓝的情感联结，带走自己制作的蓝染作品。</p>
+        <div class="btn-wrap">
+            <button class="buy-btn" onclick="openMiniProgram()">
+                <span class="icon">🛒</span> 立即报名购买
+            </button>
+            <div class="wechat-tip"><span class="badge">微信</span> 在微信内点击直接跳转小程序购买</div>
+        </div>
+    </div>
+
+    <div class="study-level fade-in">
+        <span class="level-badge">深度级</span>
+        <h3>第三层：全日闯关研学游</h3>
+        <div class="price">¥95</div>
+        <p><strong>适合人群：</strong> 深度文化爱好者、想系统了解非遗的游客</p>
+        <p><strong>内容：</strong> 完整的一日行程，包含古村导览、传承人讲解、全套蓝染实践、纹样设计等闯关式体验，深度了解墩头蓝的全流程。</p>
+        <p><strong>时长：</strong> 全天（6-8小时）</p>
+        <p><strong>收获：</strong> 成为墩头蓝的"荣誉传承人"，打造口碑爆点。</p>
+        <div class="btn-wrap">
+            <button class="buy-btn" onclick="openMiniProgram()">
+                <span class="icon">🛒</span> 立即报名购买
+            </button>
+            <div class="wechat-tip"><span class="badge">微信</span> 在微信内点击直接跳转小程序购买</div>
+        </div>
+    </div>
+
+    <h2 class="section-title fade-in">研学课程特色</h2>
+    <div class="feature-grid fade-in">
+        <div class="feature-card">
+            <span class="feature-icon">✋</span>
+            <h3>亲手体验</h3>
+            <p>从扎布、浸染到氧化，全程亲手操作</p>
+        </div>
+        <div class="feature-card">
+            <span class="feature-icon">📖</span>
+            <h3>文化讲解</h3>
+            <p>了解墩头蓝六百年历史与客家文化</p>
+        </div>
+        <div class="feature-card">
+            <span class="feature-icon">👨‍🏫</span>
+            <h3>传承人指导</h3>
+            <p>有机会与曾春雷老师面对面交流</p>
+        </div>
+        <div class="feature-card">
+            <span class="feature-icon">🎁</span>
+            <h3>作品带走</h3>
+            <p>完成的作品可以带回家作纪念</p>
+        </div>
+        <div class="feature-card">
+            <span class="feature-icon">👨‍👩‍👧‍👦</span>
+            <h3>适合全家</h3>
+            <p>亲子活动、学校研学、朋友聚会皆宜</p>
+        </div>
+    </div>
+
+    <div class="img-center fade-in">
+        <img src="images/染.jpg" alt="染色体验" style="max-width:80%;border-radius:var(--radius);box-shadow:var(--shadow);">
+        <p style="color:var(--text-light);font-size:0.85rem;margin-top:0.5rem;">↑ 蓝染体验现场</p>
+    </div>
+
+    <!-- 3个研学体系已添加小程序购买按钮 -->
+    <div class="card fade-in" style="text-align:center;margin-top:2rem;">
+        <h3>📅 报名方式</h3>
+        <p style="margin:0.8rem 0;">请通过 <a href="contact.html" style="font-weight:600;">联系我们</a> 页面获取最新研学排期和报名方式。</p>
+        <p style="color:var(--text-light);font-size:0.9rem;">研学活动报名请注明参与人数和意向日期</p>
+    </div>
+
+</div>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-logo">客家·墩头蓝</div>
+        <div class="footer-divider"></div>
+        <p>© 2026 广州大学 "今天你蓝了吗" 团队 | 版权所有</p>
+        <p>指导老师：黄丽娟教授 | 非遗传承人：曾春雷老师</p>
+        <p>联系方式：278523411@qq.com | 地址：广东省河源市和平县彭寨镇墩头村</p>
+    </div>
+</footer>
+
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+function toggleMobileMenu() { document.getElementById('nav').classList.toggle('open'); }
+const container = document.getElementById('particles');
+for (let i = 0; i < 15; i++) {
+    const p = document.createElement('div'); p.className = 'particle';
+    p.style.left = Math.random() * 100 + '%';
+    p.style.animationDuration = (15 + Math.random() * 25) + 's';
+    p.style.animationDelay = (Math.random() * 20) + 's';
+    p.style.width = p.style.height = (3 + Math.random() * 5) + 'px';
+    container.appendChild(p);
+}
+window.addEventListener('scroll', function() {
+    const h = document.getElementById('header');
+    const bt = document.getElementById('backTop');
+    if (window.scrollY > 100) { h.classList.add('scrolled'); bt.classList.add('visible'); }
+    else { h.classList.remove('scrolled'); bt.classList.remove('visible'); }
+});
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// 小程序跳转函数 - 点击打开墩头蓝文创产品店小程序购买系统
+function openMiniProgram() {
+    window.location.href = '小程序://墩头蓝文创产品店丨河源和平县/8RTT93klZBUde8m';
+}
+</script>
+</body>
+</html>
