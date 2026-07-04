@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>客家·墩头蓝 — 联系我们</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="particles-bg" id="particles"></div>
+
+<header id="header">
+    <div class="header-inner">
+        <div class="logo">
+            <img src="images/LOGO.jpg" alt="墩头蓝">
+            <div class="logo-text">
+                客家·墩头蓝
+                <small>广东省省级非物质文化遗产</small>
+            </div>
+        </div>
+        <nav id="nav">
+            <a href="index.html">首页</a>
+            <a href="craft.html">制作工艺</a>
+            <a href="news.html">新闻动态</a>
+            <a href="about.html">关于我们</a>
+            <a href="study.html">研学活动</a>
+            <a href="contact.html" class="active">联系我们</a>
+        </nav>
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+    </div>
+</header>
+
+<div class="page-banner">
+    <h2>联系我们</h2>
+    <p>期待与您一起守护墩头蓝</p>
+</div>
+
+<div class="container">
+
+    <div class="contact-grid fade-in">
+        <div class="contact-item">
+            <span class="contact-icon">👥</span>
+            <div>
+                <h4>团队名称</h4>
+                <p>广州大学"今天你蓝了吗"创业团队</p>
+            </div>
+        </div>
+        <div class="contact-item">
+            <span class="contact-icon">👩‍🏫</span>
+            <div>
+                <h4>指导老师</h4>
+                <p>黄丽娟 教授</p>
+            </div>
+        </div>
+        <div class="contact-item">
+            <span class="contact-icon">👨‍🎨</span>
+            <div>
+                <h4>非遗传承人</h4>
+                <p>曾春雷 老师</p>
+            </div>
+        </div>
+        <div class="contact-item">
+            <span class="contact-icon">📧</span>
+            <div>
+                <h4>电子邮箱</h4>
+                <p>278523411@qq.com</p>
+            </div>
+        </div>
+        <div class="contact-item">
+            <span class="contact-icon">📞</span>
+            <div>
+                <h4>联系电话</h4>
+                <p>13148751493</p>
+            </div>
+        </div>
+        <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <div>
+                <h4>联系地址</h4>
+                <p>广东省河源市和平县彭寨镇墩头村</p>
+            </div>
+        </div>
+        <div class="contact-item">
+            <span class="contact-icon">🏫</span>
+            <div>
+                <h4>研学基地</h4>
+                <p>广东省河源市和平县彭寨镇墩头村</p>
+            </div>
+        </div>
+        <div class="contact-item">
+            <span class="contact-icon">📱</span>
+            <div>
+                <h4>微信公众号</h4>
+                <p>搜索关注，获取最新动态</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card fade-in" style="margin-bottom:2rem;">
+        <h3>📱 关注我们</h3>
+        <p style="line-height:2;">更多关于墩头蓝的动态，请关注我们的官方公众号和社交媒体平台。<br>期待与您一起，守护这份六百年客家蓝色记忆！</p>
+    </div>
+
+    <!-- Contact Form -->
+    <h2 class="section-title fade-in">给我们留言</h2>
+    <p class="section-subtitle fade-in">如果您对墩头蓝感兴趣，或有合作意向，欢迎留言</p>
+
+    <div class="form-card fade-in">
+        <form id="contactForm" onsubmit="return handleSubmit(event)">
+            <div class="form-group">
+                <label>姓名</label>
+                <input type="text" placeholder="请输入您的姓名" required>
+            </div>
+            <div class="form-group">
+                <label>邮箱</label>
+                <input type="email" placeholder="请输入您的邮箱" required>
+            </div>
+            <div class="form-group">
+                <label>留言内容</label>
+                <textarea rows="5" placeholder="请输入您的留言（研学报名请注明参与人数和意向日期）" required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">✉ 提交留言</button>
+        </form>
+    </div>
+
+</div>
+
+<footer>
+    <div class="footer-inner">
+        <div class="footer-logo">客家·墩头蓝</div>
+        <div class="footer-divider"></div>
+        <p>© 2026 广州大学 "今天你蓝了吗" 团队 | 版权所有</p>
+        <p>指导老师：黄丽娟教授 | 非遗传承人：曾春雷老师</p>
+        <p>联系方式：278523411@qq.com | 地址：广东省河源市和平县彭寨镇墩头村</p>
+    </div>
+</footer>
+
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+function toggleMobileMenu() { document.getElementById('nav').classList.toggle('open'); }
+const container = document.getElementById('particles');
+for (let i = 0; i < 15; i++) {
+    const p = document.createElement('div'); p.className = 'particle';
+    p.style.left = Math.random() * 100 + '%';
+    p.style.animationDuration = (15 + Math.random() * 25) + 's';
+    p.style.animationDelay = (Math.random() * 20) + 's';
+    p.style.width = p.style.height = (3 + Math.random() * 5) + 'px';
+    container.appendChild(p);
+}
+window.addEventListener('scroll', function() {
+    const h = document.getElementById('header');
+    const bt = document.getElementById('backTop');
+    if (window.scrollY > 100) { h.classList.add('scrolled'); bt.classList.add('visible'); }
+    else { h.classList.remove('scrolled'); bt.classList.remove('visible'); }
+});
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+function handleSubmit(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.btn-submit');
+    btn.textContent = '✓ 感谢您的留言！我们会尽快回复。';
+    btn.style.background = '#3d7a5a';
+    setTimeout(() => {
+        btn.textContent = '✉ 提交留言';
+        btn.style.background = '';
+        e.target.reset();
+    }, 3000);
+    return false;
+}
+</script>
+</body>
+</html>
